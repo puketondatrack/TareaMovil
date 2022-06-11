@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation2"
+    app:startDestination="@+id/nav_auto">
+
+    <fragment
+        android:id="@+id/nav_auto"
+        android:name="com.example.tareamovil.ui.auto.AutoFragment"
+        android:label="@string/menu_auto"
+        tools:layout="@layout/fragment_auto" >
+        <action
+            android:id="@+id/action_nav_auto_to_addAuto2Fragment"
+            app:destination="@id/addAuto2Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.tareamovil.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.tareamovil.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/addAuto2Fragment"
+        android:name="com.example.tareamovil.ui.auto.AddAuto2Fragment"
+        android:label="fragment_add_auto2"
+        tools:layout="@layout/fragment_add_auto2" >
+        <action
+            android:id="@+id/action_addAuto2Fragment_to_nav_auto"
+            app:destination="@id/nav_auto" />
+
+    </fragment>
+</navigation>
